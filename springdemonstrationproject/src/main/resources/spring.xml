@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- <bean id="alien" class = "bt.edu.gcit.Alien" scope="prototype" autowire="byName">  -->
+    <!-- <bean id="alien" class = "bt.edu.gcit.Alien"  autowire="byName">  -->
+    <bean id="alien" class = "bt.edu.gcit.Alien"  autowire="byType"> 
+
+    <!-- <bean id="alien" class = "bt.edu.gcit.Alien" >  -->
+        <!-- <property name="comp" ref = "comp"> -->
+
+        <property name="comp">
+            <bean id="laptop" class = "bt.edu.gcit.Laptop" />
+        </property>
+ 
+        <!-- <property name="age" value="32" /> -->
+        <!-- <property name="lap" ref="laptop" /> -->
+        <!-- <constructor-arg ref="laptop"/> -->
+
+    </bean><!--Bean is an object. Remember this-->
+
+    <!-- <bean id="laptop" class = "bt.edu.gcit.Laptop"/> -->
+    <!-- <bean id="comp" class = "bt.edu.gcit.Laptop" lazy-init="true"/> -->
+
+    <!-- <bean id="comp1" class = "bt.edu.gcit.Desktop" primary="true"/> -->
+
+
+</beans>
